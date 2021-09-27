@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey form</title>
+    <style>
+        *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+        }
+        .main_div{
+        width:100%;
+        height:100vh;
+        position:relative;
+        }
+        .box{
+        width:500px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        padding:50px;
+        background : rgba(0,0,0,.8);
+        border-radius :10px;
+        }
+        .box h1{
+        margin-bottom:30px;
+        color:#fff;
+        text-align:center;
+        text-transform:capitalize;
+        }
+        .box .inputBox {
+        position:relative;}
+
+        .box .inputBox input{
+        width:100%;
+        padding:10px;
+        font-size:16px;
+        color:#fff;
+        margin-bottom:30px;
+        border:none;
+        border-bottom:2px solid #fff;
+        background:none;
+        outline:none;
+        }
+        .box .inputBox label{
+        position:absolute;
+        color:#fff;
+        top:0;
+        left:0;
+        padding:15px;
+        font-size:12px;
+        transition:0.5s;
+        letter-spacing:1px;
+
+        }
+        .box .inputBox input:focus ~ label,
+        .box .inputBox input:valid ~ label{
+        top:-20px;
+        left:0;
+        color:#03a9f4;
+        font-size:12px;
+        }
+        .box .selectionbox{
+        margin-top:20px;}
+        .box .selectionbox label{color:#fff; margin:10px;}
+        .box .inputBox textarea{
+        background:none;
+        color:white;
+        outline:none;
+        border:2px solid #fff;
+        border-radius:10px;
+        margin-top:20px;
+        }
+        .box input[type=submit]{
+        background-color:#03a9f4;
+        color:white;
+        padding:10px;
+        border-radius:10px;
+        font-weight:bold;
+        text-transform:capitalize;
+        margin-top:10px
+
+        }
+        .box .selectionbox input{
+        background:none;
+        color:white;
+        outline:none;
+        border:2px solid #fff;
+        border-radius:10px;
+        padding:10px;}
+
+
+    </style>
+</head>
+<body>
+<main class="main_div">
+<div class="box">
+    <h1> Survey Form</h1>
+    <form method="" action="">
+            <div class="inputBox">
+                <input type="text" name="" autocomplete="off" required>
+                <label>Name</label>
+            </div>
+        <div class="inputBox">
+                <input type="email" name="" autocomplete="off" required>
+                <label>email</label>
+            </div>
+        <div class="inputBox">
+                <input type="Password" name="" autocomplete="off" required>
+                <label>password</label>
+            </div>
+         <div class="inputBox">
+                <input type="tel" name="" autocomplete="off" required>
+                <label>Telephone</label>
+            </div>
+        <div class="inputBox">
+                <input type="number" name="" autocomplete="off" required>
+                <label>Enter Number</label>
+            </div>
+        <div class="inputBox">
+                <input id="search" type="search" name="" autocomplete="off" required>
+                <label for="search">search</label>
+            </div>
+        <div class="selectionbox">
+            <input type="range" name="" autocomplete="off" required>
+                <label>range</label>
+        </div>
+        <div class="selectionbox">
+            <input type="color" name="" autocomplete="off" required>
+                <label>color</label>
+        </div>
+            <div class="selectionbox">
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                  <label for="html">HTML</label><br>
+                  <input type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">CSS</label><br>
+                  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                  <label for="javascript">JavaScript</label>
+            </div>
+         <div class="selectionbox">
+                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                  <label for="vehicle1"> I have a bike</label><br>
+                  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                  <label for="vehicle2"> I have a car</label><br>
+                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                  <label for="vehicle3"> I have a boat</label>
+            </div>
+
+        <div class="selectionbox">
+            <input list="browsers" id="browser">
+            <label for="browser">Select Browser</label>
+            <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+            </datalist>
+        </div>
+
+         <div class="selectionbox">
+            <input type="datetime-local" id="date">
+            <label for="date">Dob</label>
+        </div>
+
+        <div class="inputBox">
+                <textarea name="message" placeholder="typehere">
+                </textarea>
+            </div>
+
+
+
+        <input type="submit" value="submit">
+
+
+
+
+
+    </form>
+</div>
+
+</main>
+</body>
+</html>
